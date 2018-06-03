@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/login_top"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#008CC9"
+        >
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/btn_login_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/login_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:textSize="32sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_top"
+        android:layout_marginTop="5dp"
+        >
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入登录用户名/邮箱/手机号"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_password"
+            android:layout_below="@id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入登录密码"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textSize="24sp"
+            android:layout_below="@id/edt_password"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:layout_below="@id/btn_login"
+            android:background="@null"
+            android:textSize="18sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#008CC9"
+
+            />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费注册"
+            android:layout_below="@id/btn_login"
+            android:background="@null"
+            android:textSize="18sp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#008CC9"
+            android:layout_alignParentRight="true"
+
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
