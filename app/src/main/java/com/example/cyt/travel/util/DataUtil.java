@@ -3,6 +3,8 @@ package com.example.cyt.travel.util;
 import android.content.Context;
 import android.widget.ImageView;
 
+import com.example.cyt.travel.entity.Menu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,5 +19,14 @@ public class DataUtil {
             datas.add(icon);
         }
         return datas;
+    }
+
+    public static List<Menu> getMainMenus(int[] icons,String[] names){
+        List<Menu> menus = new ArrayList<>();
+        for (int i = 0; i < icons.length ; i++) {
+            Menu menu = new Menu(icons[i],names[i]);
+            menus.add(menu);
+        }
+        return menus;
     }
 }
