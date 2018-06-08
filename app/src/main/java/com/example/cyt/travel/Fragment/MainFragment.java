@@ -31,6 +31,10 @@ public class MainFragment extends Fragment {
     protected RecyclerView mRecyclerViewMenu;
     protected String[] menuNames;
 
+    protected RecyclerView mRecyclerViewSecondMenu;
+    protected int[] secondMenuIcons = {R.drawable.menu_second_ticket,R.drawable.menu_second_service,R.drawable.menu_second_airport};
+    protected String[] secondMenuNames;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        secondMenuNames = view.getResources().getStringArray(R.array.second_menu);
+        mRecyclerViewSecondMenu = view.findViewById(R.id.recyclerView_second_menu);
         menuNames = view.getResources().getStringArray(R.array.main_menu);
         mRecyclerViewMenu = view.findViewById(R.id.recyclerView_main_menu);
         mViewPagerHeaderad = view.findViewById(R.id.viewPage_main_header_ad);
@@ -51,5 +57,9 @@ public class MainFragment extends Fragment {
         //菜单
         MainMenuAdapter mainMenuAdapter = new MainMenuAdapter(getActivity(),DataUtil.getMainMenus(menuIcons,menuNames));
         mRecyclerViewMenu.setAdapter(mainMenuAdapter);
+
+        mRecyclerViewSecondMenu.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        MainMenuAdapter secondMainMenuAdapter = new MainMenuAdapter(getActivity(),DataUtil.getMainMenus(secondMenuIcons,secondMenuNames));
+        mRecyclerViewSecondMenu.setAdapter(secondMainMenuAdapter);
     }
 }

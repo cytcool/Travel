@@ -15,7 +15,7 @@
     <android.support.v7.widget.LinearLayoutCompat
         android:id="@+id/container_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:background="#ffffff"
         android:orientation="horizontal">

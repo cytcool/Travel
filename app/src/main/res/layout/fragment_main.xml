@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPage_main_header_ad"
         android:layout_width="match_parent"
-        android:layout_height="140dp">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="140dp"></android.support.v4.view.ViewPager>
 
-    <include layout="@layout/main_search"
+    <include
+        layout="@layout/main_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/nav_header_index"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        />
+        android:src="@drawable/nav_header_index" />
 
     <ScrollView
-        android:layout_below="@id/viewPage_main_header_ad"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPage_main_header_ad"
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -35,10 +34,111 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView_main_menu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
+            <View
+                android:id="@+id/main_menu_gray_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/recyclerView_main_menu"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#D8DDE1" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_second_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerView_main_menu"
+                android:layout_marginTop="20dp">
 
             </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/main_menu_gray_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/recyclerView_second_menu"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#D8DDE1" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_menu_gray_line2"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="108dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_hot_news" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="秋天真的来了，吃火锅就按这个火锅地图走！"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/main_spread1" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_spread2" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_spread3" />
+
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/main_spread4" />
+
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
 
         </RelativeLayout>
 
